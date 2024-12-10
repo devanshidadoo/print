@@ -1,0 +1,448 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #FFFFFF; /* White */
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFAFA;  /*soft pink*/
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.page-title{
+	font-family:'helvica, arial, sans-serif';
+	font-size: 5.5rem;
+	font-weight:extra-condensed;
+	margin-left:1rem;
+	margin-top:3rem;
+	margin-bottom:2rem ;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.delivery-location {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    margin-right: 15rem;
+}
+
+.search-box input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #F4F4F4;
+    border-radius: 10px;
+    width: 100%;
+	max-width: 300px;
+	background-color: #f8f8f8; /* Change this to any color you like */
+    color: #959595; /* This sets the text color typed by the user */
+	height: 20px
+}
+
+.search-box input::placeholder {
+    color: #959595; /* Change to your desired placeholder color */   /*Kgpians,what do u wanna dbz*/
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.group-buy-container {
+    display: flex;
+    align-items: center;
+	justify-content: space-between;
+    background-color: #f8f8f8;   /* light background color */
+    border-radius: 10px;         /* large border-radius for pill shape */
+    padding: 0.5rem 2rem;      /* add spacing; extra right space for icon overlap */
+    position: relative;          /* for positioning the icon */
+    font-size: 1.2rem;           /* adjust font size as needed */
+    color: #000;                 /* text color */
+    font-weight: normal; 	/* adjust as needed */
+	height: 40px;
+	border:none;
+	cursor:pointer;
+	box-sizing:border-box;
+	text-decoration: none;
+	
+	
+}
+
+.group-buy-container:hover{
+	background-color: #ffffff;
+}
+
+.group-buy-text {
+    /* basic text styles */
+    white-space: nowrap;  
+}
+
+/* The icon container */
+.group-buy-icon {
+    position: absolute;
+    right: -0.2rem;   /* adjust to position the icon slightly inside */
+    background-color: #7F0000;  /* dark red background, adjust as needed */
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icon inside the red circle */
+.group-buy-icon img {
+    width: 1.2rem;  /* adjust icon size */
+    height: auto;
+    filter: invert(95%) sepia(5%) saturate(200%) hue-rotate(0deg) brightness(90%) contrast(95%);
+    /* adjust filters or replace with a white icon for visibility */
+}
+
+.cart-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f8f8f8;    /* same as group-buy-container */
+    border-radius: 10px;          /* same value */
+    padding: 0.5rem 2rem;         /* same value */
+    position: relative;           /* for icon positioning, same value */
+    font-size: 1.2rem;            /* same value */
+    color: #000;                  /* same value */
+    font-weight: normal;          /* same value */
+    height: 40px;                 /* same value */
+	border:none;
+	cursor:pointer;
+	box-sizing:border-box;
+	text-decoration: none;
+}
+
+.cart-container:hover{
+	background-color:#ffffff;
+}
+
+.cart-text {
+    white-space: nowrap;  /* same value */
+}
+
+.cart-icon {
+    position: absolute;
+    right: -0.2rem;         /* same value */
+    background-color: #006666; /* green shade instead of red, change as needed */
+    width: 2rem;           /* same value */
+    height: 2rem;          /* same value */
+    border-radius: 50%;    /* same value */
+    display: flex;         /* same value */
+    justify-content: center;/* same value */
+    align-items: center;   /* same value */
+}
+
+.cart-icon img {
+    width: 1.2rem;  /* same value */
+    height: auto;    /* same value */
+    /* Same filter if needed, or remove if not necessary */
+    filter: invert(95%) sepia(5%) saturate(200%) hue-rotate(0deg) brightness(90%) contrast(95%);
+}
+
+
+/* Main Content */
+.main-content {
+    padding: 2rem;
+}
+
+
+/* Content layout */
+.content-container {
+    display: flex;
+    align-items: flex-start;   /* Align both sections at the top */
+    justify-content: flex-start; /* Ensures content is aligned to the left */
+    gap: 0rem;                 /* Space between the upload section and items section */
+    /* Add any width or padding as needed */
+}
+
+.upload-box-section {
+    flex: 2.5; /* Make this section wider if you prefer */
+}
+
+.items-section {
+    flex: 30rem !important; /* Items section takes less horizontal space */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem !important;
+	margin-top:-6rem;
+}
+
+.item-card {
+    background: #E7eaf5 !important; 
+    border-radius: 20px !important;
+    display: flex;
+    align-items: center;
+    padding: 2.5rem !important;
+    gap: 2rem !important;
+    /* Adjust width or min-width if needed */
+	margin-right:15rem;
+	border:none;
+	cursor:pointer;
+	color:#000;
+	text-align:left;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Upload Section */
+.upload-box-section {
+    margin-top: 1rem; /* Space below "Print Store" title */
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.upload-box {
+    background: #e7eaf5; /* Light lavender background similar to the image */
+    border-radius: 20px;  /* Rounded corners */
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.upload-box-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.upload-icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -0rem;
+    left: -0rem;
+}
+
+.upload-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.1rem 4rem; /* Shift to the right to make space for the icon */
+    color: #000;
+}
+
+.upload-subtitle {
+    margin: 0 0 0rem 4rem; /* Shift subtitle under title */
+    color: #88888b;
+    font-size: 0.95rem;
+}
+
+.file-drop-area {
+    background: #ffffff;
+    border: 2px dashed #717dba;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;	
+	height:10rem;
+}
+
+.drop-box {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #5E5A9C;
+}
+
+.drop-icon {
+    margin-bottom: 0.5rem;
+}
+
+.drop-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #5E5A9C;
+}
+
+.upload-button {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.upload-limits {
+    font-size: 0.5rem;
+    color: #88888b;
+    margin: 0;
+}
+
+
+/* Items Section */
+
+
+.item-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+.item-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.item-info .description {
+    margin: 0.3rem 0 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.item-card:hover{
+	transform:translateY(-5px);
+	box-shadow:0 4px 10px rgba(0,0,0,0.1);
+	background: #e2e2f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+	.page-title {
+        font-size: 3rem; /* Smaller font for mobile */
+        margin-left: 0.5rem;
+    }
+
+    .search-box input {
+        width: 150px;
+    }
+	.content-container {
+        flex-direction: column; /* stack sections */
+        align-items: stretch;
+    }
+
+    .upload-box-section,
+    .items-section {
+        width: 100%; /* full width on small screens */
+        margin: 0 auto;
+    }
+	.item-card {
+        padding: 1rem;
+        margin-right: 0;
+    }
+
+    .item-image img {
+        width: 60px;
+        height: 60px; /* Slightly smaller images for mobile */
+    }
+	.upload-box {
+        max-width: 100%;
+        padding: 1rem; /* reduce padding for less clutter on small screens */
+    }
+
+    .upload-title {
+        margin: 0 0 0.1rem 0; /* remove large left margin on mobile */
+    }
+
+    .upload-subtitle {
+        margin: 0; /* simplify layout on mobile */
+    }
+	 .group-buy-container,
+    .cart-container {
+        padding: 0.5rem 1rem; /* Reduce horizontal padding */
+        font-size: 1rem; 
+        height: auto; /* Remove fixed height so it can shrink naturally */
+    }
+	 /* Hide the text on small screens */
+    .group-buy-text,
+    .cart-text {
+        display: none;
+    }
+
+    /* Make the containers circular and centered */
+    .group-buy-container,
+    .cart-container {
+        width: 40px;    /* Adjust to desired size */
+        height: 40px;
+        border-radius: 50%;
+        padding: 0.5rem; /* Reduce padding so icon is centered nicely */
+        justify-content: center; /* Center the icon */
+    }
+
+    /* If needed, adjust icon size for small screens */
+    .group-buy-icon img,
+    .cart-icon img {
+        width: 1.2rem;
+        height: auto;
+    }
+	 /* Reduce margins so logos appear right next to the search bar */
+    .search-box {
+        margin-right: 1rem; /* significantly smaller than 15rem */
+    }
+
+    /* Reduce search box width on small screens */
+    .search-box input {
+        width: 200px; /* A smaller width on mobile */
+        max-width: 80%; /* or make it flexible with percentages */
+    }
+
+    /* If header elements are too spread out, reduce gap or padding */
+    .header-actions {
+        gap: 0.5rem;
+    }
+
+    /* Ensure the header containers don’t overflow */
+    .header {
+        flex-wrap: wrap; /* Let the header wrap if needed */
+    }
+	.upload-icon {
+        display: none;
+    }
+	.upload-box-section {
+        margin-bottom: 2rem; /* Adds space below upload section */
+    }
+	
+}
+@media (min-width: 1024px) {
+    .search-box input {
+        width: 700px; /* Increase the width on larger screens */
+    }
+}
